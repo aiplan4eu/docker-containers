@@ -4,7 +4,7 @@ MAINTAINER alvalentini@fbk.eu
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y gcc make cmake g++ python3-dev python3-pip openjdk-11-jdk git
-RUN pip3 install grpcio grpcio-tools
+RUN pip3 install grpcio grpcio-tools pysmt
 
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 
