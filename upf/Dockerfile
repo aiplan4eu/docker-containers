@@ -3,7 +3,6 @@ MAINTAINER alvalentini@fbk.eu
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y gcc make cmake g++ libboost-all-dev python3-dev python3-pip openjdk-16-jdk git unzip wget curl
-RUN pip3 install grpcio grpcio-tools pysmt
+RUN apt-get update && apt-get install -y gcc make cmake g++ python3-dev python3-pip openjdk-16-jdk git unzip wget curl gringo
 
 CMD /bin/bash
