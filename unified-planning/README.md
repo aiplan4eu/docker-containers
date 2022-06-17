@@ -25,6 +25,7 @@ Install `docker` and `docker-coompose`
     From the container
 
         cd ~/test
+        python3 basic.py
         python3 icaps_demo.py
 
 

@@ -21,7 +21,14 @@ RUN usermod -u $UID planner && groupmod -g $GID planner
 
 USER planner
 
+# Configuration
+
+RUN echo "set -g mouse on" > $HOME/.tmux.conf 
+RUN touch ~/.sudo_as_admin_successful
+
 COPY init.bash /home/planner/init.bash
+
+# Get other code
 
 RUN mkdir /home/planner/aiplan4eu
 
