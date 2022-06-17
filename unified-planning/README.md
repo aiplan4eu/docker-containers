@@ -1,6 +1,16 @@
 # Docker images for AIPlan4EU unified planning code
 
-Install `docker` and `docker-coompose`
+# Install
+
+* Install [docker](http://www.docker.com) (tested on v. 19.03, 20.10) 
+
+    See also 
+    [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
+    In particular, add your user to the `docker` group and log out and in again, before proceeding.
+
+
+* Install [docker-compose](https://docs.docker.com/compose/install/) (tested on v. 1.28.2)
+
 
 ## Build image
 
