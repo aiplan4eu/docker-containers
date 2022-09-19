@@ -32,9 +32,7 @@ This folder will be mounted in the container to store persistntt files.
 
 * Using Colab
 
-    Open a notebook in a browser
-
-        [UP Basics notebook](https://colab.research.google.com/github/aiplan4eu/unified-planning/blob/master/notebooks/Unified_Planning_Basics.ipynb)
+    Open a notebook in a browser (e.g.,    [UP Basics notebook](https://colab.research.google.com/github/aiplan4eu/unified-planning/blob/master/notebooks/Unified_Planning_Basics.ipynb)
 
     Connect to local runtime using the jupiter notebook link printed when starting the container
     (or print it again with `docker logs unifiedplanning`)
@@ -52,18 +50,20 @@ This folder will be mounted in the container to store persistntt files.
         python3 basic.py
         python3 icaps_demo.py
 
+    To detach tmux terminal without closing the session, from tmux inside the container use keyboard keys
 
-## Develop your code in playground folder and run it in the container
+        CTRL-b d
 
-Use your fovorite editor to write code, save files in the playground folder
+## Development
+
+* Use your fovorite editor to write code, save files in the playground folder
 and run them from the container.
 
 
-## Detach tmux terminal without closing the session
+* Use Jupiter notebook (including Colab) and connect it to the local runtime provided by the docker container
 
-From tmux inside the container, use keyboard keys
 
-    CTRL-b d
+
 
 ## Stop the docker container
 
