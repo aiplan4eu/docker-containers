@@ -13,6 +13,8 @@ RUN pip install unified-planning[pyperplan,tamer,enhsp,fast-downward]
 
 RUN pip install matplotlib networkx 
 
+RUN pip3 install jupyter notebook jupyter_http_over_ws
+
 # Create user: planner (password: planner) with given UID/GID and sudo power
 
 RUN useradd -ms /bin/bash planner && echo "planner:planner" | chpasswd && adduser planner sudo
@@ -25,6 +27,7 @@ USER planner
 
 RUN echo "set -g mouse on" > $HOME/.tmux.conf 
 RUN touch ~/.sudo_as_admin_successful
+RUN jupyter serverextension enable --py jupyter_http_over_ws
 
 COPY init.bash /home/planner/init.bash
 
@@ -40,7 +43,11 @@ VOLUME /home/planner/playground
 
 WORKDIR /home/planner/playground
 
-ENTRYPOINT [ "/bin/bash", "/home/planner/init.bash" ]
+CMD [ "jupyter", "notebook", \
+        "--NotebookApp.allow_origin='https://colab.research.google.com'", \
+        "--port=8888", "--NotebookApp.port_retries=0" ]
+
+#ENTRYPOINT [ "/bin/bash", "/home/planner/init.bash" ]
 
 #CMD /bin/bash
 

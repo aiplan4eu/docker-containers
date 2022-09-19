@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: up
+    container_name: unifiedplanning
     dns: 8.8.8.8
     network_mode: "host"
     tty: true

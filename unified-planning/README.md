@@ -12,7 +12,7 @@
 * Install [docker-compose](https://docs.docker.com/compose/install/) (tested on v. 1.28.2)
 
 
-## Build image
+## Build the UP docker image
 
     ./build.bash
 
@@ -22,21 +22,35 @@ This folder will be mounted in the container to store persistntt files.
 
     mkdir -p $HOME/playground
 
-## Start the docker container
+## Start the UP docker container
 
     ./start.bash
 
-## Attach tmux terminal inside the container
-
-    ./run.bash
+    
 
 ## Test
 
-From the container
+* Using Colab
 
-    cd ~/test
-    python3 basic.py
-    python3 icaps_demo.py
+    Open a notebook in a browser
+
+        [UP Basics notebook](https://colab.research.google.com/github/aiplan4eu/unified-planning/blob/master/notebooks/Unified_Planning_Basics.ipynb)
+
+    Connect to local runtime using the jupiter notebook link printed when starting the container
+    (or print it again with `docker logs unifiedplanning`)
+
+
+* Using CLI
+
+    Access the container
+
+        docker exec -it unifiedplanning tmux
+
+    Run code in the container
+
+        cd ~/test
+        python3 basic.py
+        python3 icaps_demo.py
 
 
 ## Develop your code in playground folder and run it in the container

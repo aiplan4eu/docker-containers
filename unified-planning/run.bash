@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker exec -it up tmux a 
+docker exec -it unifiedplanning tmux
 
