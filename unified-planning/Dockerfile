@@ -25,8 +25,7 @@ RUN echo "$BUILDATETIME" > /builddatetime
 USER planner
 
 RUN pip install --pre --force-reinstall unified-planning
-RUN pip install git+https://github.com/aiplan4eu/unified-planning.git@multiagent-io
-RUN pip install unified-planning[pyperplan,tamer,enhsp,fast-downward]
+RUN pip install unified-planning[pyperplan,tamer,enhsp,fast-downward,fmap]
 
 # Configuration
 
